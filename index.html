@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المتوقع تحصيله من حساب دعم الانشطة الرياضية</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="DataTables/datatables.min.css" rel="stylesheet">
+ 
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">
+        المتوقع تحصيله من حساب دعم الانشطة الرياضية
+      </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted scrollto" href="#contact">تواصل معنا</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <!-- <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Inner Page</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Inner Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>--> 
+    <!--End Breadcrumbs -->
+
+    <section class="inner-page mt-5 pt-5" dir="rtl">
+      <div class="container">
+        <div class="py-4">
+            <h1> ادخل البيانات واضغط احصل علي النتائج </h1>
+            <form id="datasource">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">التمهيدي</label>
+                  <input type="number" class="form-control" id="kg" placeholder="ادخل عدد طلاب التمهيدي" value="0" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1">الابتدائي</label>
+                  <input type="number" class="form-control" id="primary" placeholder="ادخل عدد طلاب الابتدائي" value="0" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1">الاعدادي</label>
+                  <input type="number" class="form-control" id="prep" placeholder="ادخل عدد طلاب الاعدادي" value="0" required>
+                </div>
+                
+                <div class="form-group">
+                  <label for="exampleInputPassword1">الثانوي</label>
+                  <input type="number" class="form-control" id="secon" placeholder="ادخل عدد طلاب الثانوي" value="0" required>
+                </div>
+                
+                <button type="submit" id="getdata" class="btn btn-primary">احصل علي النتائج</button>
+            </form>
+        </div>
+
+        <table id="example" class="display nowrap" style="width:100%">
+        </table>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+    <script src="DataTables/datatables.min.js"></script>
+    <script>
+        var dataSet = [];
+
+        // data table
+        var Datat = $('#example').DataTable( {
+            "scrollX": true,
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'excel', 'print'
+            ],
+            columns: [
+                // { title: 'اللجنة االعليا' },
+                // { title: 'متبقي بعد خصم اللجنة العليا' },
+                // { title: 'وزارة المالية' },
+                // { title: 'متبقي بعد خصم وزارة المالية' },
+                // { title: 'اللجنة الرئيسية' },
+                // { title: 'متبقي بعد خصم اللجنة الرئيسية' },
+                // { title: 'اللجنة الفرعية' },
+                // { title: 'متبقي بعد خصم اللجنة الفرعية' },
+                // { title: 'الاجمالي' },
+                   { title:'اسم اللجنة'},
+                   { title:'القيمة' }
+            ],
+            data: dataSet,
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ar.json',
+            },
+        } );
+        // data table
+
+        $(document).ready(function() {
+            $( "#datasource" ).on( "submit", function( event ) {
+                event.preventDefault();
+                allmoney = kg.value * 2.5 + primary.value * 2.5 + prep.value * 3 + secon.value * 4 ;
+                console.log(allmoney);
+                high = .1 * allmoney;
+                afterhigh = .9 * allmoney;
+                ministry = .15 * afterhigh;
+                afterministry = .85 * afterhigh;
+                maincomm = .1 * afterministry;
+                aftermaincomm = .9 * afterministry;
+                seccomm = .1 * aftermaincomm;
+                afterseccomm = .9 * aftermaincomm;
+                dataSet=[high,afterhigh,ministry,afterministry,maincomm,aftermaincomm,seccomm,afterseccomm,afterseccomm];
+                dataSet2 = [
+                    ['اللجنة االعليا',high],
+                    ['متبقي بعد خصم اللجنة العليا',afterhigh],
+                    ['وزارة المالية',ministry],
+                    ['متبقي بعد خصم وزارة المالية',afterministry],
+                    ['اللجنة الرئيسية',maincomm],
+                    ['متبقي بعد خصم اللجنة الرئيسية',aftermaincomm],
+                    ['اللجنة الفرعية',seccomm],
+                    ['متبقي بعد خصم اللجنة الفرعية',afterseccomm],
+                    ['الاجمالي',afterseccomm]
+                ];
+                // data table
+                Datat.clear();
+                Datat.row.add(['اللجنة االعليا',high]);
+                Datat.row.add(['متبقي بعد خصم اللجنة العليا',afterhigh]);
+                Datat.row.add(['وزارة المالية',ministry]);
+                Datat.row.add(['متبقي بعد خصم وزارة المالية',afterministry]);
+                Datat.row.add(['اللجنة الرئيسية',maincomm]);
+                Datat.row.add(['متبقي بعد خصم اللجنة الرئيسية',aftermaincomm]);
+                Datat.row.add(['اللجنة الفرعية',seccomm]);
+                Datat.row.add(['متبقي بعد خصم اللجنة الفرعية',afterseccomm]);
+                Datat.row.add(['الاجمالي',afterseccomm]);
+                Datat.draw();
+                // data table
+            });
+            
+        } );
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
