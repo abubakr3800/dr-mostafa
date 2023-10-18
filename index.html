@@ -121,6 +121,7 @@
                 // { title: 'اللجنة الفرعية' },
                 // { title: 'متبقي بعد خصم اللجنة الفرعية' },
                 // { title: 'الاجمالي' },
+                {title:'الترتيب'},
                    { title:'اسم اللجنة'},
                    { title:'القيمة' }
             ],
@@ -146,15 +147,15 @@
                 afterseccomm = .9 * aftermaincomm;
                 dataSet=[high,afterhigh,ministry,afterministry,maincomm,aftermaincomm,seccomm,afterseccomm,afterseccomm];
                 dataSet2 = [
-                    ['اللجنة االعليا',high],
-                    ['متبقي بعد خصم اللجنة العليا',afterhigh],
-                    ['وزارة المالية',ministry],
-                    ['متبقي بعد خصم وزارة المالية',afterministry],
-                    ['اللجنة الرئيسية',maincomm],
-                    ['متبقي بعد خصم اللجنة الرئيسية',aftermaincomm],
-                    ['اللجنة الفرعية',seccomm],
-                    ['متبقي بعد خصم اللجنة الفرعية',afterseccomm],
-                    ['الاجمالي',afterseccomm]
+                    [1,'اللجنة االعليا',high],
+                    [2,'متبقي بعد خصم اللجنة العليا',afterhigh],
+                    [3,'وزارة المالية',ministry],
+                    [4,'متبقي بعد خصم وزارة المالية',afterministry],
+                    [5,'اللجنة الرئيسية',maincomm],
+                    [6,'متبقي بعد خصم اللجنة الرئيسية',aftermaincomm],
+                    [7,'اللجنة الفرعية',seccomm],
+                    [8,'متبقي بعد خصم اللجنة الفرعية',afterseccomm],
+                    [9,'الاجمالي',afterseccomm]
                 ];
                 // data table
                 Datat.clear();
