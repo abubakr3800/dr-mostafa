@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المتوقع تحصيله من حساب دعم الانشطة الرياضية</title>
+    <title>د / مصطفي اللقلق</title>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -120,7 +120,7 @@
                 // { title: 'متبقي بعد خصم اللجنة الرئيسية' },
                 // { title: 'اللجنة الفرعية' },
                 // { title: 'متبقي بعد خصم اللجنة الفرعية' },
-                // { title: 'الاجمالي' },
+                // { title: 'الباقي لتنفيذ الأنشطة' },
                 {title:'الترتيب'},
                    { title:'اسم اللجنة'},
                    { title:'القيمة' }
@@ -155,19 +155,19 @@
                     [6,'متبقي بعد خصم اللجنة الرئيسية',aftermaincomm],
                     [7,'اللجنة الفرعية',seccomm],
                     [8,'متبقي بعد خصم اللجنة الفرعية',afterseccomm],
-                    [9,'الاجمالي',afterseccomm]
+                    [9,'الباقي لتنفيذ الأنشطة',afterseccomm]
                 ];
                 // data table
                 Datat.clear();
-                Datat.row.add([1,'اللجنة االعليا',high]);
-                Datat.row.add([2,'متبقي بعد خصم اللجنة العليا',afterhigh]);
-                Datat.row.add([3,'وزارة المالية',ministry]);
-                Datat.row.add([4,'متبقي بعد خصم وزارة المالية',afterministry]);
-                Datat.row.add([5,'اللجنة الرئيسية',maincomm]);
-                Datat.row.add([6,'متبقي بعد خصم اللجنة الرئيسية',aftermaincomm]);
-                Datat.row.add([7,'اللجنة الفرعية',seccomm]);
-                Datat.row.add([8,'متبقي بعد خصم اللجنة الفرعية',afterseccomm]);
-                Datat.row.add([9,'الاجمالي',afterseccomm]);
+                Datat.row.add([1,'اللجنة االعليا',(Math.round(high * 100) / 100).toFixed(2)]);
+                Datat.row.add([2,'متبقي بعد خصم اللجنة العليا',(Math.round(afterhigh * 100) / 100).toFixed(2)]);
+                Datat.row.add([3,'وزارة المالية',(Math.round(ministry * 100) / 100).toFixed(2)]);
+                Datat.row.add([4,'متبقي بعد خصم وزارة المالية',(Math.round(afterministry * 100) / 100).toFixed(2)]);
+                Datat.row.add([5,'اللجنة الرئيسية',(Math.round(maincomm * 100) / 100).toFixed(2)]);
+                Datat.row.add([6,'متبقي بعد خصم اللجنة الرئيسية',(Math.round(aftermaincomm * 100) / 100).toFixed(2)]);
+                Datat.row.add([7,'اللجنة الفرعية',(Math.round(seccomm * 100) / 100).toFixed(2)]);
+                Datat.row.add([8,'متبقي بعد خصم اللجنة الفرعية',(Math.round(afterseccomm * 100) / 100).toFixed(2)]);
+                Datat.row.add([9,'الباقي لتنفيذ الأنشطة',(Math.round(afterseccomm * 100) / 100).toFixed(2)]);
                 Datat.draw();
                 // data table
             });
