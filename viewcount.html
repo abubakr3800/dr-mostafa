@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> عدد زوار حساب دعم الأنشطة الرياضية مع د/ مصطفي اللقلق </title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="DataTables/datatables.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">
+        المتوقع تحصيله من حساب دعم الانشطة الرياضية
+      </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="getstarted scrollto" href="https://wa.me/201002951190">تواصل معنا</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <!-- <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Inner Page</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Inner Page</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>--> 
+    <!--End Breadcrumbs -->
+
+    <section class="inner-page mt-5 pt-5" dir="rtl">
+      <div class="container">
+        <div class="py-4">
+            <!-- <h1> عدد زوار الصفحة الرئيسية </h1> -->
+            <div class="card text-center">
+              <div class="card-header">
+                عدد زوار الصفحة الرئيسية
+              </div>
+              <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                  <p id="viewcountnum" ></p>
+                  <!-- <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer> -->
+                </blockquote>
+              </div>
+            </div>
+        </div>
+
+        <table id="example" class="display nowrap" style="width:100%">
+        </table>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js"></script>
+    <script type="application/javascript">
+      // Import the functions you need from the SDKs you need
+      // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+      // import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics.js";
+      // import { getDatabase , ref , update , remove , set , child , get } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyD4YvM6K3wTKUlnhgQqy9sNn0C-fyxnfgg",
+        authDomain: "drmostafa-67d57.firebaseapp.com",
+        projectId: "drmostafa-67d57",
+        storageBucket: "drmostafa-67d57.appspot.com",
+        messagingSenderId: "553198436173",
+        appId: "1:553198436173:web:8be8bfca28e25068e74104",
+        measurementId: "G-ENLNXLWZ2D",
+        databaseURL:"https://drmostafa-67d57-default-rtdb.firebaseio.com"
+      };
+    
+      // Initialize Firebase
+      // const app = initializeApp(firebaseConfig);
+      // const analytics = getAnalytics(app);
+      firebase.initializeApp(firebaseConfig);
+      function callme(){
+        alert("hi");
+      }
+      function showviews(json) {
+        viewr = json.ip;
+        showshow(viewr);
+      }
+
+      function showshow(viewr) {
+        var views;
+        var ip_to_string = viewr.toString();
+
+        for (let i = 0; i < ip_to_string.length; i++) {
+          ip_to_string = ip_to_string.replace(".","-");
+        }
+
+        firebase.database().ref().child("page_views/"+ip_to_string).set({
+          viewr : viewr
+        });
+
+        firebase.database().ref().child("page_views").on("value" , function (snapshot) {
+          views = snapshot.numChildren();
+          // console.log(views);
+          document.getElementById("viewcountnum").innerHTML = '<i class="fa-solid fa-eye"></i> ' + views;
+        });          
+      }
+    </script>
+
+    <script type="application/javascript" src="https://api.ipify.org/?format=jsonp&callback=showviews"></script>
+
+</body>
+</html>
